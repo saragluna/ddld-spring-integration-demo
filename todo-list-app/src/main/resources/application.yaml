@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: todo-list-app
+  jms:
+    servicebus:
+      connection-string: <service-bus-connection-string>
+      pricing-tier: standard
+
+server:
+  port: 8080
+
+azure:
+  activedirectory:
+    tenant-id: <tenant-id>
+    client-id: <client-id>
+    client-secret: <client-secret>
+    authorization-clients:
+      graph:
+        scopes:
+          - https://graph.microsoft.com/User.Read
+
+  keyvault:
+    uri: <keyvault-uri>
+    tenant-id: <tenant-id>
+    client-id: <client-id>
+    client-key: <client-key>
+
+  cosmos:
+    uri: <cosmos-uri>
+    database: xiada-cosmos
+#   key: # stored in key vault
+
+
+
